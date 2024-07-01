@@ -1,0 +1,112 @@
+<!-- sudoku_table.html -->
+<table>
+  <caption>Sudoku of the day</caption>
+  <colgroup><col><col><col>
+  <colgroup><col><col><col>
+  <colgroup><col><col><col>
+  <tbody>
+    <tr>
+      <td><input type="text" name="cell" value="{{ puzzle[0][0] if puzzle[0][0] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[0][1] if puzzle[0][1] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[0][2] if puzzle[0][2] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[0][3] if puzzle[0][3] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[0][4] if puzzle[0][4] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[0][5] if puzzle[0][5] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[0][6] if puzzle[0][6] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[0][7] if puzzle[0][7] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[0][8] if puzzle[0][8] != 0 else '' }}"></td>
+    </tr>
+    <tr>
+      <td><input type="text" name="cell" value="{{ puzzle[1][0] if puzzle[1][0] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[1][1] if puzzle[1][1] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[1][2] if puzzle[1][2] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[1][3] if puzzle[1][3] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[1][4] if puzzle[1][4] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[1][5] if puzzle[1][5] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[1][6] if puzzle[1][6] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[1][7] if puzzle[1][7] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[1][8] if puzzle[1][8] != 0 else '' }}"></td>
+    </tr>
+    <tr>
+      <td><input type="text" name="cell" value="{{ puzzle[2][0] if puzzle[2][0] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[2][1] if puzzle[2][1] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[2][2] if puzzle[2][2] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[2][3] if puzzle[2][3] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[2][4] if puzzle[2][4] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[2][5] if puzzle[2][5] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[2][6] if puzzle[2][6] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[2][7] if puzzle[2][7] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[2][8] if puzzle[2][8] != 0 else '' }}"></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><input type="text" name="cell" value="{{ puzzle[3][0] if puzzle[3][0] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[3][1] if puzzle[3][1] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[3][2] if puzzle[3][2] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[3][3] if puzzle[3][3] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[3][4] if puzzle[3][4] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[3][5] if puzzle[3][5] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[3][6] if puzzle[3][6] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[3][7] if puzzle[3][7] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[3][8] if puzzle[3][8] != 0 else '' }}"></td>
+    </tr>
+    <tr>
+      <td><input type="text" name="cell" value="{{ puzzle[4][0] if puzzle[4][0] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[4][1] if puzzle[4][1] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[4][2] if puzzle[4][2] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[4][3] if puzzle[4][3] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[4][4] if puzzle[4][4] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[4][5] if puzzle[4][5] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[4][6] if puzzle[4][6] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[4][7] if puzzle[4][7] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[4][8] if puzzle[4][8] != 0 else '' }}"></td>
+    </tr>
+    <tr>
+      <td><input type="text" name="cell" value="{{ puzzle[5][0] if puzzle[5][0] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[5][1] if puzzle[5][1] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[5][2] if puzzle[5][2] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[5][3] if puzzle[5][3] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[5][4] if puzzle[5][4] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[5][5] if puzzle[5][5] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[5][6] if puzzle[5][6] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[5][7] if puzzle[5][7] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[5][8] if puzzle[5][8] != 0 else '' }}"></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><input type="text" name="cell" value="{{ puzzle[6][0] if puzzle[6][0] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[6][1] if puzzle[6][1] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[6][2] if puzzle[6][2] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[6][3] if puzzle[6][3] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[6][4] if puzzle[6][4] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[6][5] if puzzle[6][5] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[6][6] if puzzle[6][6] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[6][7] if puzzle[6][7] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[6][8] if puzzle[6][8] != 0 else '' }}"></td>
+    </tr>
+    <tr>
+      <td><input type="text" name="cell" value="{{ puzzle[7][0] if puzzle[7][0] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[7][1] if puzzle[7][1] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[7][2] if puzzle[7][2] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[7][3] if puzzle[7][3] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[7][4] if puzzle[7][4] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[7][5] if puzzle[7][5] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[7][6] if puzzle[7][6] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[7][7] if puzzle[7][7] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[7][8] if puzzle[7][8] != 0 else '' }}"></td>
+    </tr>
+    <tr>
+      <td><input type="text" name="cell" value="{{ puzzle[8][0] if puzzle[8][0] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[8][1] if puzzle[8][1] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[8][2] if puzzle[8][2] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[8][3] if puzzle[8][3] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[8][4] if puzzle[8][4] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[8][5] if puzzle[8][5] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[8][6] if puzzle[8][6] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[8][7] if puzzle[8][7] != 0 else '' }}"></td>
+      <td><input type="text" name="cell" value="{{ puzzle[8][8] if puzzle[8][8] != 0 else '' }}"></td>
+    </tr>
+  </tbody>
+</table>
