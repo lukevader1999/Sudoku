@@ -1,13 +1,12 @@
 #Checks validity for the whole configuarion
-def checkRules(puzzle):
-    check = True
+def puzzleValid(puzzle):
     #Check validity for every single tiles
     for i in range(0,9):
         for j in range(0,9):
             if puzzle[i][j] != 0:
-                if not (rowValid and columnValid and boxValid):
-                    check = False
-    return check
+                if not (rowValid(puzzle,i,j) and columnValid(puzzle,i,j) and boxValid(puzzle,i,j)):
+                    return False
+    return True
 
 #Check row validity of a single tile
 def rowValid(puzzle,x,y):
