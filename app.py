@@ -15,10 +15,6 @@ puzzle = [
     [0, 0, 0, 0, 8, 0, 0, 7, 9]
 ]
 
-def solve_sudoku(board):
-    # Add your Sudoku solving algorithm here
-    pass
-
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':

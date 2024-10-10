@@ -4,6 +4,15 @@ class Sudoku:
 	
     #Zero is used as a placeholder for undefined cells
     def __init__(self, array= [[0 for _ in range(9)] for _ in range(9)] ): 
+        lenArray = len(array)
+        if not(lenArray == 9):
+            raise ValueError("Length {} of array not valid for initialising Sudoku class".format(lenArray))
+        for i in range(0,lenArray):
+            if not(len(array[i]) == 9):
+                raise ValueError("Length {} of sub-array not valid for initialising Sudoku class".format(len(array[i])))
+            for element in array[i]:
+                if not(0<=element<=9):
+                    raise ValueError("Value {} not valid for entry of init-array of class Sudoku".format(element))                
         self.array = array 
 
     def print(self):
