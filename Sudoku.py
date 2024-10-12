@@ -12,11 +12,34 @@ class Sudoku:
                 raise ValueError("Length {} of sub-array not valid for initialising Sudoku class".format(len(array[i])))
             for element in array[i]:
                 if not(0<=element<=9):
-                    raise ValueError("Value {} not valid for entry of init-array of class Sudoku".format(element))                
+                    raise ValueError("Value {} not valid for entry of init-array of class Sudoku".format(element))   
+
         self.array = array 
+
+        self.possibleArray = [[[x for x in range(1,10)] for _ in range(9)] for _ in range(9)]
+        for x in range(0,9):
+            for y in range(0,9):
+                number = self.array[x][y]
+                if number != 0:
+                    self.possibleArray[x][y] = []
+                    self.removeNumberFromPossibleArray(x,y,number)                
+    
+    def removeNumberFromPossibleArray(self,x,y,number):
+        self.possibleArray[x][y] = []
+
+        for i_x in range(0,9):
+            if i_x != x:
+                if number in self.possibleArray[i_x][y]:
+                    self.possibleArray[i_x][y].remove(number)
+
+        for i_y in range(0,9):
+            if i_y != y:
+                if number in self.possibleArray[x][i_y]:
+                    self.possibleArray[x][i_y].remove(number)
 
     def print(self):
         print(self.array)
+        print(self.possibleArray)
     
     def getRow(self, x):
         if not(0<=x<=8):
@@ -41,6 +64,7 @@ class Sudoku:
             return ValueError("One of the values x={}, y={} and value={} isn't a valid argument for method setCellValue of class Sudoku".format(x,y,value))
     
         self.array[x][y] = value
+        self.removeNumberFromPossibleArray(x,y,value)
 
     def isValid(self):
         return checkRules.puzzleValid(self.array) 
