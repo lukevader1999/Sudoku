@@ -32,13 +32,13 @@ def columnValid(puzzle,x,y):
 def boxValid(puzzle,x,y):
     check = True
     value = puzzle[x][y]
-    xBox = (x % 3)*3
-    yBox = (y % 3)*3
+    xBox = (x // 3)*3
+    yBox = (y // 3)*3
     for i in range(0,3):
         for j in range(0,3):
             xTemp = xBox + i
             yTemp = yBox + j
-            if not (xTemp == x and yTemp == y):
+            if (xTemp != x and yTemp != y):
                 if puzzle[xTemp][yTemp] == value:
                     check = False
     return check

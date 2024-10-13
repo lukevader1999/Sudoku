@@ -27,8 +27,6 @@ def index():
                 puzzle[i][j] = int(value) if value.isdigit() else 0
                 index += 1
         
-        solve_sudoku(puzzle)
-    
     return render_template('index.html', puzzle=puzzle)
 
 if __name__ == '__main__':

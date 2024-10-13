@@ -47,13 +47,27 @@ puzzle4 = [
     [0,0,9,1,5,8,0,2,6], 
     [0,0,0,0,7,4,8,0,1]
 ]
-# Wird richtig gelöst, habe die Lösung in der Website wo ich es her hatte eingetragen!!!
+# Puuzle 4 wird richtig gelöst, habe die Lösung in der Website wo ich es her hatte eingetragen!!!
 # Mit der isValid Funktion muss wohl irgendetwas falsch sein :(
 
-mySudoku = Sudoku(puzzle4)
+puzzle5 = [
+    [9,0,3,4,0,6,0,0,0], 
+    [0,0,5,0,2,1,0,0,3], 
+    [4,0,0,0,0,0,0,8,0], 
+    [1,6,0,0,0,0,0,9,0], 
+    [7,2,0,5,0,4,3,1,8], 
+    [3,5,0,9,1,7,4,0,6], 
+    [0,0,1,2,0,0,0,0,0], 
+    [5,0,0,0,0,0,2,0,4], 
+    [0,0,0,0,4,9,8,5,0]
+]
+# Puzzle 5 wird auch richtig gelöst!
+
+mySudoku = Sudoku(puzzle5)
 
 mySudoku.print()
 
+mySudoku.SudokuSolver.analysePossibleArray()
 mySudoku.SudokuSolver.analysePossibleArray()
 mySudoku.SudokuSolver.analysePossibleArray()
 

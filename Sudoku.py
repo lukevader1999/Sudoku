@@ -1,5 +1,6 @@
 import checkRules
 import SudokuSolver
+import copy
 
 class Sudoku: 
 	
@@ -84,7 +85,14 @@ class Sudoku:
     def setCellValue(self,x,y,value):
         if (not(0<=y<=8)) or (not(0<=x<=8)) or (not(0<=value<=9)):
             return ValueError("One of the values x={}, y={} and value={} isn't a valid argument for method setCellValue of class Sudoku".format(x,y,value))
-    
+
+        #Check if the insertion violates any rules
+        tempArray = copy.deepcopy(self.array)
+        tempArray[x][y] = value
+        if not checkRules.puzzleValid(tempArray):
+            print(self.array)
+            return ValueError("Inserting {} at x={}, y={} is not valid".format(x,y,value))
+
         self.array[x][y] = value
         self.removeNumberFromPossibleArray(x,y,value)
 
