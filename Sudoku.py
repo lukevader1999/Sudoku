@@ -98,3 +98,14 @@ class Sudoku:
 
     def isValid(self):
         return checkRules.puzzleValid(self.array) 
+    
+    def solve(self):
+        counter = 0
+        while counter <= 10:
+            if not self.SudokuSolver.analysePossibleArray():
+                break
+            counter += 1
+        print("It took me {} rounds trying to solve the sudoku".format(counter))
+        self.print()
+        print("I evaluate the validity of the sudoku as {}".format(self.isValid()))
+        

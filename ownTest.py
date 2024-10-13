@@ -63,13 +63,45 @@ puzzle5 = [
 ]
 # Puzzle 5 wird auch richtig gelöst!
 
-mySudoku = Sudoku(puzzle5)
+puzzle6 = [
+    [0,0,0,0,0,0,0,9,0], 
+    [0,9,0,8,3,0,0,2,0], 
+    [0,0,0,5,0,0,0,0,1], 
+    [0,2,0,4,0,0,8,3,0], 
+    [0,5,0,7,0,0,9,0,2], 
+    [0,0,7,0,0,8,0,5,0], 
+    [0,3,0,2,0,0,6,0,0], 
+    [0,0,1,3,9,0,5,0,4], 
+    [4,6,9,0,0,0,2,0,0]
+]
+#Puzzle 6 wird auch richtig gelöst! (Schwer auf sudoku.com)
 
-mySudoku.print()
+puzzle7 = [
+    [7,0,0,0,6,1,0,0,8], 
+    [0,1,9,5,7,0,3,0,0], 
+    [0,0,0,0,0,2,7,0,0], 
+    [0,0,7,0,0,0,0,0,0], 
+    [0,0,8,0,0,0,0,3,7], 
+    [6,4,1,8,3,7,0,0,0], 
+    [0,0,0,1,0,4,9,0,6], 
+    [1,0,4,0,2,9,0,0,0], 
+    [8,9,0,0,0,0,1,0,0]
+]
+# Puzzle 7 (Experte auf sudoku.com) wird auch gelöst
 
-mySudoku.SudokuSolver.analysePossibleArray()
-mySudoku.SudokuSolver.analysePossibleArray()
-mySudoku.SudokuSolver.analysePossibleArray()
+puzzle8 = [
+    [9,0,0,3,0,0,0,0,0], 
+    [3,0,0,0,6,0,0,2,0], 
+    [0,0,5,0,0,0,7,0,3], 
+    [0,3,1,0,8,4,0,0,0], 
+    [8,2,0,0,1,0,5,4,9], 
+    [0,4,0,0,0,0,8,0,0], 
+    [7,5,0,1,0,6,0,8,0], 
+    [4,0,0,8,0,0,1,0,0], 
+    [0,0,0,7,0,0,0,0,0]
+]
+# Puzzle 8 (Meister auf sudoku.com) 
 
-mySudoku.print()
-print(mySudoku.isValid())
+mySudoku = Sudoku(puzzle8)
+
+mySudoku.solve()
