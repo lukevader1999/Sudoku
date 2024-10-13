@@ -1,6 +1,6 @@
 from Sudoku import *
 
-puzzle = [
+puzzle1 = [
     [5, 3, 0, 0, 7, 0, 0, 0, 0],
     [6, 0, 0, 1, 9, 5, 0, 0, 0],
     [0, 9, 8, 0, 0, 0, 0, 6, 0],
@@ -12,6 +12,50 @@ puzzle = [
     [0, 0, 0, 0, 8, 0, 0, 7, 9]
 ]
 
-mySudoku = Sudoku(puzzle)
+puzzle2 = [
+    [1,2,3,4,5,6,7,8,9], 
+    [0,0,0,0,0,0,0,0,0], 
+    [0,0,0,0,0,0,0,0,0], 
+    [0,1,0,0,0,0,0,0,0], 
+    [0,0,0,0,0,0,0,0,0], 
+    [0,0,0,0,0,0,0,0,0], 
+    [0,0,0,0,0,0,0,0,0], 
+    [0,0,0,1,0,0,0,0,0], 
+    [0,0,0,0,0,0,1,0,0]
+]
+
+puzzle3 = [
+    [0,0,0,0,0,0,0,0,0], 
+    [0,0,0,0,0,0,0,0,0], 
+    [0,0,0,0,0,0,0,0,0], 
+    [0,0,0,0,0,0,0,0,0], 
+    [0,0,0,0,0,0,0,0,0], 
+    [0,0,0,0,0,0,0,0,0], 
+    [0,0,0,0,0,0,0,0,0], 
+    [0,0,0,0,0,0,0,0,0], 
+    [0,0,0,0,0,0,0,0,0]
+]
+
+puzzle4 = [
+    [0,3,2,0,0,6,0,0,0], 
+    [7,0,0,0,0,0,5,3,0], 
+    [5,0,8,0,3,7,1,0,0], 
+    [0,0,0,0,0,0,0,1,3], 
+    [0,1,0,2,4,0,6,0,7], 
+    [6,0,3,0,0,0,2,0,0], 
+    [0,7,1,6,2,9,3,4,0], 
+    [0,0,9,1,5,8,0,2,6], 
+    [0,0,0,0,7,4,8,0,1]
+]
+# Wird richtig gelöst, habe die Lösung in der Website wo ich es her hatte eingetragen!!!
+# Mit der isValid Funktion muss wohl irgendetwas falsch sein :(
+
+mySudoku = Sudoku(puzzle4)
 
 mySudoku.print()
+
+mySudoku.SudokuSolver.analysePossibleArray()
+mySudoku.SudokuSolver.analysePossibleArray()
+
+mySudoku.print()
+print(mySudoku.isValid())

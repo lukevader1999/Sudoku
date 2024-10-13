@@ -1,4 +1,5 @@
 import checkRules
+import SudokuSolver
 
 class Sudoku: 
 	
@@ -23,23 +24,44 @@ class Sudoku:
                 if number != 0:
                     self.possibleArray[x][y] = []
                     self.removeNumberFromPossibleArray(x,y,number)                
+
+        self.SudokuSolver = SudokuSolver.SudokuSolver(self)
     
     def removeNumberFromPossibleArray(self,x,y,number):
         self.possibleArray[x][y] = []
 
+        #Remove number from corresponding row
         for i_x in range(0,9):
             if i_x != x:
                 if number in self.possibleArray[i_x][y]:
                     self.possibleArray[i_x][y].remove(number)
 
+        #Remove number from corresponding column
         for i_y in range(0,9):
             if i_y != y:
                 if number in self.possibleArray[x][i_y]:
                     self.possibleArray[x][i_y].remove(number)
 
+        #Remove number from corresponding box
+        xBox = (x // 3)*3
+        yBox = (y // 3)*3
+        for i in range(0,3):
+            for j in range(0,3):
+                xTemp = xBox + i
+                yTemp = yBox + j
+                if (xTemp == x and yTemp == y):
+                    continue
+                else:
+                    if number in self.possibleArray[xTemp][yTemp]:
+                        self.possibleArray[xTemp][yTemp].remove(number)
+
     def print(self):
-        print(self.array)
-        print(self.possibleArray)
+        print("Array:")
+        for line in self.array:
+            print(line)
+        print("Possible Array:")
+        for line in self.possibleArray: 
+            print(line)
     
     def getRow(self, x):
         if not(0<=x<=8):
