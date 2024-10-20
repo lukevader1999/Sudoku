@@ -81,3 +81,26 @@ class Sudoku:
             for y in range(0,9):
                 print(self.cellGrid[x][y].possibleValues, end = " ")
             print()
+    
+    def rowcolboxValid(self, rowcolbox):
+        counter = [0 for _ in range(0,10)]
+        for cell in rowcolbox:
+            counter[cell.value] += 1
+        for number in counter[1::]:
+            if number > 1:
+                return False
+            return True
+    
+    def isValid(self):
+        for row in self.getRows():
+            if not self.rowcolboxValid(row):
+                return False
+
+        for column in self.getColumns():
+            if not self.rowcolboxValid(column):
+                return False
+
+        for box in self.getBoxes():
+            if not self.rowcolboxValid(box):
+                return False
+        return True

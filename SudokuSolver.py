@@ -6,8 +6,13 @@ class SudokuSolver(Sudoku):
         super().__init__(arrayGrid)
         self.somethingChanged = False 
 
-    def singlePossibleInCell(self):
-        for row in self.cellGrid:
+    def checkCellForSingle(self,cell):
+        if len(cell.possibleValues) == 1:
+            self.setCellValue(cell,cell.possibleValues[0])
+            self.somethingChanged = True
+
+    def checkSinglePossibleInCell(self):
+        for row in self.getRows():
             for cell in row:
                 if len(cell.possibleValues) == 1:
                     self.setCellValue(cell,cell.possibleValues[0])
@@ -27,6 +32,8 @@ class SudokuSolver(Sudoku):
                         self.somethingChanged = True   
 
     def checkSingleAppearences(self):
+        self.checkSinglePossibleInCell()
+
         for row in self.getRows():
             for number in range(1,10):
                 self.checkForSingleAppearenceOfNumberInRowcolbox(row,number)   
@@ -42,10 +49,10 @@ class SudokuSolver(Sudoku):
     def solve(self):
         self.checkSingleAppearences()
         counter = 1
-        while self.somethingChanged:
-            print(counter)
+        while self.somethingChanged: 
+            #print(counter)
             self.somethingChanged = False
             self.checkSingleAppearences()
             counter += 1
-        print("I could solve the sudoku to this result:")
+        print("I could solve the sudoku to this result in {} iterations:".format(counter))
         self.print()

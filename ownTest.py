@@ -1,4 +1,5 @@
-from Sudoku import *
+from SudokuSolver import *
+from AdvancedSudokuSolver import *
 
 puzzle1 = [
     [5, 3, 0, 0, 7, 0, 0, 0, 0],
@@ -11,6 +12,10 @@ puzzle1 = [
     [0, 0, 0, 4, 1, 9, 0, 0, 5],
     [0, 0, 0, 0, 8, 0, 0, 7, 9]
 ]
+#SudokuSolver = SudokuSolver(puzzle1)
+#SudokuSolver.solve()
+#print(SudokuSolver.isValid())
+#Completly solved!
 
 puzzle2 = [
     [1,2,3,4,5,6,7,8,9], 
@@ -47,8 +52,7 @@ puzzle4 = [
     [0,0,9,1,5,8,0,2,6], 
     [0,0,0,0,7,4,8,0,1]
 ]
-# Puuzle 4 wird richtig gelöst, habe die Lösung in der Website wo ich es her hatte eingetragen!!!
-# Mit der isValid Funktion muss wohl irgendetwas falsch sein :(
+#Completely solved!
 
 puzzle5 = [
     [9,0,3,4,0,6,0,0,0], 
@@ -61,7 +65,7 @@ puzzle5 = [
     [5,0,0,0,0,0,2,0,4], 
     [0,0,0,0,4,9,8,5,0]
 ]
-# Puzzle 5 wird auch richtig gelöst!
+#Completely solved!
 
 puzzle6 = [
     [0,0,0,0,0,0,0,9,0], 
@@ -74,22 +78,9 @@ puzzle6 = [
     [0,0,1,3,9,0,5,0,4], 
     [4,6,9,0,0,0,2,0,0]
 ]
-#Puzzle 6 wird auch richtig gelöst! (Schwer auf sudoku.com)
+#Completely solved!
 
 puzzle7 = [
-    [7,0,0,0,6,1,0,0,8], 
-    [0,1,9,5,7,0,3,0,0], 
-    [0,0,0,0,0,2,7,0,0], 
-    [0,0,7,0,0,0,0,0,0], 
-    [0,0,8,0,0,0,0,3,7], 
-    [6,4,1,8,3,7,0,0,0], 
-    [0,0,0,1,0,4,9,0,6], 
-    [1,0,4,0,2,9,0,0,0], 
-    [8,9,0,0,0,0,1,0,0]
-]
-# Puzzle 7 (Experte auf sudoku.com) wird auch gelöst
-
-puzzle8 = [
     [9,0,0,3,0,0,0,0,0], 
     [3,0,0,0,6,0,0,2,0], 
     [0,0,5,0,0,0,7,0,3], 
@@ -100,8 +91,8 @@ puzzle8 = [
     [4,0,0,8,0,0,1,0,0], 
     [0,0,0,7,0,0,0,0,0]
 ]
-# Puzzle 8 (Meister auf sudoku.com) 
-
-mySudoku = Sudoku(puzzle8)
-
-mySudoku.solve()
+# Puzzle 8 (Meister auf sudoku.com) wird vom AdvancedSudokuSolver gelöst!
+SudokuSolver = AdvancedSudokuSolver(puzzle7)
+SudokuSolver.solve()
+print(SudokuSolver.isValid())
+SudokuSolver.printPossibles()
